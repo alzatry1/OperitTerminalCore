@@ -14,7 +14,7 @@ android {
     defaultConfig {
         minSdk = 26
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        // AGP 9: 声明的 consumer-rules.pro 不存在会硬失败；无规则可给，移除声明
         ndk {
             abiFilters += listOf("arm64-v8a")
         }
